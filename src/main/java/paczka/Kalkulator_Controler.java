@@ -10,12 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class Kalkulator_Controler {
 
-    private Kalkulator kalkulator;
 
-    @Autowired
-    public Kalkulator_Controler(Kalkulator kalkulator) {
-        this.kalkulator = kalkulator;
-    }
 
     @RequestMapping("/kalkulator_form")
     public String pobieranieLiczb (
@@ -25,7 +20,9 @@ public class Kalkulator_Controler {
             Model model
             ){
 
-            kalkulator.setPierwsza(pierwsza);
+
+        Kalkulator kalkulator = new Kalkulator(6666, 9999);
+        kalkulator.setPierwsza(pierwsza);
             kalkulator.setDruga(druga);
 
             if (dzialanie.equals("dodawanie")){

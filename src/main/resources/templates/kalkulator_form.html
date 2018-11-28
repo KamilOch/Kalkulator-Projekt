@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>it.morfoza.Kalkulator</title>
 </head>
 <body>
@@ -9,29 +9,29 @@
     <h1>KALKULATOR</h1>
 
     <h2>Podaj pierwszą liczbę</h2>
-        <input class="pierwsza">
+        <input class="pierwsza"/>
 
     <h2>Podaj drugą liczbę</h2>
-        <input class="druga">
+        <input class="druga"/>
 
     <h2>Wybierz działanie</h2>
-      <div> <label><input type="radio" name="dzialanie" value="dodawanie">DODAWANIE</label></div>
-      <div><label><input type="radio" name="dzialanie" value="odejmowanie">ODEJMOWANIE</label></div>
-      <div> <label><input type="radio" name="dzialanie" value="mnozenie">MNOŻENIE</label></div>
-      <div> <label><input type="radio" name="dzialanie" value="dzielenie">DZIELENIE</label></div>
+      <div><label><input type="radio" name="dzialanie" value="dodawanie"/>DODAWANIE</label></div>
+      <div><label><input type="radio" name="dzialanie" value="odejmowanie"/>ODEJMOWANIE</label></div>
+      <div> <label><input type="radio" name="dzialanie" value="mnozenie"/>MNOŻENIE</label></div>
+      <div> <label><input type="radio" name="dzialanie" value="dzielenie"/>DZIELENIE</label></div>
 
 
-    <br>
-    <br>
+    <br/>
+    <br/>
 
-    <input type="submit" value="Oblicz">
+    <input type="submit" value="Oblicz"/>
 
-    <br>
-    <br>
+    <br/>
+    <br/>
 
     <h1>Wynik obliczeń</h1>
 
-    <div class="wynik" th:text="${kalkulator.getWynik()}"></div>
+    <div class="wynik" th:text="${wynik}"></div>
 
 
 

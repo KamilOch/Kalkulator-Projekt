@@ -1,5 +1,6 @@
 package paczka;
 
+import org.springframework.stereotype.Component;
 
 public class Kalkulator {
 
