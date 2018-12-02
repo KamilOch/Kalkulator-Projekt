@@ -4,36 +4,36 @@ import org.springframework.stereotype.Component;
 
 public class Kalkulator {
 
-    private double pierwsza;
-    private double druga;
-    private double wynik;
+    private Double pierwsza;
+    private Double druga;
+    private Double wynik;
 
-    public Kalkulator (double pierwsza, double druga){
+    public Kalkulator (Double pierwsza, Double druga){
         this.pierwsza = pierwsza;
         this.druga = druga;
     }
 
-    public double getPierwsza() {
+    public Double getPierwsza() {
         return pierwsza;
     }
 
-    public double getDruga() {
+    public Double getDruga() {
         return druga;
     }
 
-    public double getWynik() {
+    public Double getWynik() {
         return wynik;
     }
 
-    public void setPierwsza (double pierwsza) {
+    public void setPierwsza (Double pierwsza) {
         this.pierwsza = pierwsza;
     }
 
-    public void setDruga(double druga) {
+    public void setDruga(Double druga) {
         this.druga = druga;
     }
 
-    public void setWynik(double wynik) {
+    public void setWynik(Double wynik) {
         this.wynik = wynik;
     }
 }

@@ -14,14 +14,14 @@ public class Kalkulator_Controler {
 
     @RequestMapping("/kalkulator_form")
     public String pobieranieLiczb (
-            @RequestParam(value = "pierwsza", required = true) double pierwsza,
-            @RequestParam(value = "druga", required = true) double druga,
-            @RequestParam(value = "dzalanie", required = true) String dzialanie,
+            @RequestParam(value = "pierwsza", required = false) Double pierwsza,
+            @RequestParam(value = "druga", required = false) Double druga,
+            @RequestParam(value = "dzialanie", required = false) String dzialanie,
             Model model
             ){
 
 
-        Kalkulator kalkulator = new Kalkulator(6666, 9999);
+        Kalkulator kalkulator = new Kalkulator(6666.0, 9999.0);
         kalkulator.setPierwsza(pierwsza);
             kalkulator.setDruga(druga);
 
@@ -39,7 +39,19 @@ public class Kalkulator_Controler {
             }
 
             model.addAttribute("wynik" , kalkulator.getWynik());
-      return "kalkulator_form";
+            model.addAttribute("operaca" , dzialanie);
+            model.addAttribute("test" , "a kuku ");
+
+      return "wynik";
+
+
+
 
     }
+
+    @RequestMapping("/")
+    public String wyswierlanie (){
+        return "kalkulator_form";
+    }
+
 }
