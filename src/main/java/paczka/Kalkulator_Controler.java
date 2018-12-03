@@ -21,21 +21,21 @@ public class Kalkulator_Controler {
             ){
 
 
-        Kalkulator kalkulator = new Kalkulator(6666.0, 9999.0);
-        kalkulator.setPierwsza(pierwsza);
+            Kalkulator kalkulator = new Kalkulator(6666.0, 9999.0);
+            kalkulator.setPierwsza(pierwsza);
             kalkulator.setDruga(druga);
 
             if (dzialanie.equals("dodawanie")){
-                kalkulator.setWynik(pierwsza + druga);
+                kalkulator.dodawanie(pierwsza, druga);
             }
             else if (dzialanie.equals("odejmowanie")){
-                kalkulator.setWynik (pierwsza - druga);
+                kalkulator.odejmowanie (pierwsza, druga);
             }
             else if (dzialanie.equals("mnozenie")){
-                kalkulator.setWynik (pierwsza * druga);
+                kalkulator.mnozenie (pierwsza,  druga);
             }
             else if (dzialanie.equals("dzielenie")){
-                kalkulator.setWynik (pierwsza / druga);
+                kalkulator.dzielenie (pierwsza, druga);
             }
 
             model.addAttribute("wynik" , kalkulator.getWynik());
