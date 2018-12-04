@@ -25,9 +25,6 @@ public class Kalkulator {
     }
 
     public double mnozenie (Double pierwsza, Double druga){
-        if (pierwsza !=0 || druga !=0){
-            wynik=0.0;
-        } else
         wynik= pierwsza*druga;
         return wynik;
     }
